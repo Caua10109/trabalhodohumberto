@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>humbertomedadez</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body style="background:linear-gradient(120deg,#0a0 0%,#181818 60%,#00ff99 100%);">
+  <header class="header">
+    <div class="container">
+  <div style="position:relative;left:50%;transform:translateX(-50%);width:100vw;background:#003300;border-radius:12px;padding:12px 0;margin-bottom:18px;box-shadow:0 2px 8px #0a0a;">
+        <h1 class="logo" style="margin:0 auto;color:#eafff2;text-shadow:0 0 2px #0a0;font-size:2.2rem;letter-spacing:2px;text-align:center;display:block;">HUMBERTO ME DA 10!!</h1>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#produtos">Produtos</a></li>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section id="hero" class="hero" style="background:linear-gradient(135deg,#0a0 0%,#111 100%);color:#fff;">
+      <div class="container">
+        <h2 style="color:#0a0;">Produtos Terciários Sustentáveis</h2>
+        <p>Qualidade, inovação e respeito ao meio ambiente. Verde e preto, do seu jeito!</p>
+        <a href="#produtos" class="btn">Ver Produtos</a>
+      </div>
+    </section>  
+    <div style="display:flex;flex-wrap:wrap;gap:32px;align-items:flex-start;justify-content:center;">
+      <section id="produtos" class="produtos" style="flex:2 1 400px;min-width:260px;">
+        <div class="produtos-grid">
+          <div class="produto-card">
+            <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80" alt="Mesa de escritório" style="background:#0a0;object-fit:cover;width:100%;height:100px;">
+            <h3 style="color:#0a0;">Mesa de Escritório</h3>
+            <p>Mesa moderna para ambientes empresariais.</p>
+            <span class="preco">R$ 49,90</span>
+            <button onclick="adicionarCarrinho('Mesa de Escritório', 49.90)">Comprar</button>
+          </div>
+          <div class="produto-card">
+            <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="Cama empresarial" style="background:#0a0;object-fit:cover;width:100%;height:100px;">
+            <h3 style="color:#0a0;">Cama Empresarial</h3>
+            <p>Cama confortável para descanso em empresas.</p>
+            <span class="preco">R$ 89,90</span>
+            <button onclick="adicionarCarrinho('Cama Empresarial', 89.90)">Comprar</button>
+          </div>
+          <div class="produto-card">
+            <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80" alt="Armário empresarial" style="background:#0a0;object-fit:cover;width:100%;height:100px;">
+            <h3 style="color:#0a0;">Armário Empresarial</h3>
+            <p>Armário espaçoso para ambientes corporativos.</p>
+            <span class="preco">R$ 29,90</span>
+            <button onclick="adicionarCarrinho('Armário Empresarial', 29.90)">Comprar</button>
+          </div>
+        </div>
+      </section>
+      <aside id="carrinho" class="carrinho" style="flex:1 1 220px;min-width:220px;max-width:260px;">
+        <h3 style="color:#0a0;">Carrinho</h3>
+        <ul id="itens-carrinho"></ul>
+        <button id="limpar-carrinho">Limpar Carrinho</button>
+        <div id="pix-area" style="margin-top:18px;">
+          <h4 style="color:#0a0;margin-bottom:8px;">Pagamento via Pix</h4>
+          <p style="font-size:0.98rem;">Chave Pix: <b>cauarocha10109@gmail.com</b></p>
+          <button id="btn-pix" style="background:#0a0;color:#fff;border:none;border-radius:8px;padding:10px 18px;font-weight:bold;cursor:pointer;margin-top:8px;">Finalizar Compra no Pix</button>
+          <div id="pix-msg" style="margin-top:10px;color:#0a0;font-weight:bold;"></div>
+        </div>
+      </aside>
+    </div>
+    </section>
+    <section id="sobre" class="sobre">
+      <div class="container">
+        <h2 style="color:#0a0;">Sobre Nós</h2>
+  <p>Na ME DA 10 HUMBERTO, oferecemos produtos terciários com qualidade, sustentabilidade e preço justo. Seu lar merece o melhor!</p>
+  <p style="margin-top:10px;color:#0a0;font-weight:bold;">Donos da empresa: Cauã, Guilherme, João Paulo, Gabriel Senna, Fernando, Isabelli</p>
+      </div>
+    </section>
+    <section id="contato" class="contato">
+      <div class="container">
+        <h2 style="color:#0a0;">Contato</h2>
+        <form>
+          <input type="text" placeholder="Seu nome" required>
+          <input type="email" placeholder="Seu e-mail" required>
+          <textarea placeholder="Mensagem" required></textarea>
+          <button type="submit">Enviar</button>
+        </form>
+      </div>
+    </section>
+    <aside id="carrinho" class="carrinho">
+      <h3 style="color:#0a0;">Carrinho</h3>
+      <ul id="itens-carrinho"></ul>
+      <button id="limpar-carrinho">Limpar Carrinho</button>
+      <div id="pix-area" style="margin-top:18px;">
+        <h4 style="color:#0a0;margin-bottom:8px;">Pagamento via Pix</h4>
+        <p style="font-size:0.98rem;">Chave Pix: <b>cauarocha10109@gmail.com</b></p>
+        <button id="btn-pix" style="background:#0a0;color:#fff;border:none;border-radius:8px;padding:10px 18px;font-weight:bold;cursor:pointer;margin-top:8px;">Finalizar Compra no Pix</button>
+        <div id="pix-msg" style="margin-top:10px;color:#0a0;font-weight:bold;"></div>
+      </div>
+    </aside>
+  </main>
+  <footer class="footer" style="background:#0a0;color:#111;">
+    <div class="container">
+  <p>&copy; 2025 ME DA 10 HUMBERTO. Todos os direitos reservados.<br>Donos da empresa: Cauã, Guilherme, João Paulo, Gabriel Senna, Fernando, Isabelli</p>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
